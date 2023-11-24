@@ -5,11 +5,10 @@ import dropdown_icon from "../Components/Assets/dropdown_icon.png";
 import Item from "../Components/Items/Item";
 
 const ShopCategory = (props) => {
-  // const { all_product } = useContext(ShopContext);
   const { all_product } = useContext(ShopContext);
   return (
     <div className="shop-category">
-      <img src={props.banner} alt="" />
+      <img className="shopcategory-banner" src={props.banner} alt="" />
       <div className="shopcategory-indexSort">
         <p>
           <span>Showing 1-12</span> out of 36 products
@@ -35,6 +34,9 @@ const ShopCategory = (props) => {
             return null;
           }
         })}
+      </div>
+      <div className="shopcategory-loadmore">
+        <h5>Explore More</h5>
       </div>
     </div>
   );
